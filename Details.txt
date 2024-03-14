@@ -1,0 +1,25 @@
+Backend
+
+This project is a simple social media application backend built using Node.js with Express.js framework. It uses MongoDB as the database and integrates authentication with JSON Web Tokens (JWT). Below are the key points detailing the technologies used and how the project is structured:
+
+Node.js: JavaScript runtime for building the server.
+
+Express.js: Web framework for Node.js to handle HTTP requests and routing.
+
+MongoDB: NoSQL database to store users, posts and contact form data.
+
+Mongoose: ODM (Object Data Modeling) library for MongoDB and Node.js for data modeling and database interaction.
+
+bcrypt.js: For hashing and comparing passwords.
+
+JSON Web Tokens (JWT): JWT is a compact, URL-safe means of representing claims to be transferred between two parties. In this project, JWT is used for authentication. When a user logs in successfully, a JWT containing the user's ID is generated and sent to the client. This token is then included in subsequent requests to authenticate the user.
+
+Cors(Cross-Origin Resource Sharing): Middleware for Express to handle cross-origin requests.
+
+Routing: The project defines various routes to handle different functionalities such as user registration, user login, creating posts, fetching posts, updating posts, deleting posts, and submitting contact form data.
+
+Middleware: Middleware functions are used for common functionalities such as token verification (verifyToken), which checks for the presence and validity of JWT in the request headers before allowing access to protected routes.
+
+Error Handling: Error handling middleware is implemented to catch and handle errors that occur during the execution of route handlers. It ensures that appropriate error responses are sent back to the client with relevant error messages.
+
+Server Configuration: The application listens on port 5000 for incoming HTTP requests. When the server starts, a message is logged to the console indicating that the server is running and listening on the specified port.
